@@ -1,5 +1,7 @@
 FROM tomcat:10-jdk17
 
+RUN mv /usr/local/tomcat/webapps /usr/local/tomcat/webapps_bak
+RUN mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps
 ADD tomcat-users.xml /usr/local/tomcat/conf/
 ADD context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 
