@@ -32,3 +32,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// set war file name
+bootWar {
+  archiveName 'demo.war'
+}
